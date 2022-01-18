@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 
-import App from './components/App.vue'
+import App from './App.vue'
 import router from './routes'
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './HelloWorld.vue'
 const app = createApp(App)
 import './index.css'
 app.use(router)
-createApp(App).mount('#app')
+app.mount('#app')
