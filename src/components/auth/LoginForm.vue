@@ -11,7 +11,7 @@
       </span>
       <div class="mt-4 bg-white shadow-md rounded-lg text-left">
           <div class="h-2 bg-indigo-400 rounded-t-md"> </div>
-          <form action="expense.html" method="post">
+          <form action="expense-category">
               <div class="px-8 py-6">
                 <label for="" class="block font-semibold">Email:</label>  
               <input type="email" placeholder="Enter Email" name="email" class="border-w-full h-5 px-3 py-5 md-2 hover:outline:none focus-ring-1 focus:ring-indigo-400 rounded-md">
