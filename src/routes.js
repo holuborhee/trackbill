@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import LoginForm from "./components/auth/LoginForm.vue";
-import ExpenseCategory from "./components/categories/ExpenseCategory.vue";
+import LoginForm from "./views/LoginForm.vue";
+import ExpenseCategory from "./views/ExpenseCategory.vue";
   
 
 const routes =  [

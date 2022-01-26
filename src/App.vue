@@ -2,12 +2,12 @@
   <div class="flex flex-col h-screen justify-between">
       
 
-      <the-header></the-header>
+      <TheHeader /> 
       <main class="flex-grow justify-center item-center">
             <router-view></router-view>
       </main>
         
-      <the-footer></the-footer>
+      <TheFooter />
   </div>
  
    
@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import TheHeader from './components/partials/TheHeader.vue'
-import TheFooter from './components/partials/TheFooter.vue'
+import TheHeader from './components/TheHeader.vue'
+import TheFooter from './components/TheFooter.vue'
 
 export default {
   components:{
