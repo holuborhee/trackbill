@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import LoginForm from "./views/LoginForm.vue";
+import Login from "./views/Login.vue";
 import ExpenseCategory from "./views/ExpenseCategory.vue";
   
 
@@ -12,7 +12,7 @@ const routes =  [
                     },
                     { 
                       path: "/login", 
-                      component: LoginForm, 
+                      component: Login, 
                       name:'login' 
                     },
                     { 
