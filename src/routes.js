@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Login from "./views/Login.vue";
 import ExpenseCategory from "./views/ExpenseCategory.vue";
 import SingleExpenseCategory from "./views/SingleExpenseCategory.vue";
- 
+  
 
 
   
@@ -30,9 +30,6 @@ const routes =  [
                       component: SingleExpenseCategory, 
                       name:'single-expense-category' 
                     },
-
-                  
-
                 ];
 const router = createRouter( {
      

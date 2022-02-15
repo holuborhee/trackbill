@@ -4,7 +4,13 @@
     <div class="p-4 m-4 bg-white rounded flex flex-col justify-center justify-between">
             <div class="flex justify-center justify-between">
                 <h1 class="text-2xl text-gray-700 mb-4">Wants</h1>
-              <WishListModal />
+              
+              <Modal @close="toggleModal" :modalActive = "modalActive">
+              </Modal> 
+                <button
+                class="mt-4 bg-indigo-500 text-white py-2 px-6 rounded-md hover:bg-indigo-600"
+                @click="toggleModal">Create Wishlist
+                </button>
             </div>
 
             <div class="max-w-sm rounded overflow-hidden shadow-lg bg-blue-200">
@@ -20,7 +26,7 @@
             </div>
  
     
-                 
+              
             <div class="flex justify-center mb-4 text-2xl text-gray-600">
                 <p>Wishlists</p>
             </div>
@@ -60,18 +66,29 @@
         </div>
         
     </div>
+
+      
+    
 </template>
 
-
-<script>
  
-import WishListModal from '../components/WishListModal.vue'
-
+<script>
+import Modal from '../components/WishListModal.vue'
+import {ref} from 'vue'
 export default {
-  components:{
-     
-    WishListModal,
-  }
-  
+    name:"test",
+    components:{
+        Modal,
+    },
+    setup(){
+        const modalActive = ref(false);
+
+        const toggleModal = () => {
+            modalActive.value = !modalActive.value
+        }
+
+        return { modalActive,toggleModal };
+    }
+    
 }
 </script>

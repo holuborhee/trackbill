@@ -1,11 +1,8 @@
 <template>
     <div>
        
-      <button
-      class="mt-4 bg-indigo-500 text-white py-2 px-6 rounded-md hover:bg-indigo-600"
-        @click="toggleModal = !toggleModal">Create Wishlist
-      </button>
-         <div class="fixed overflow-x-hidden overflow-y-auto inset-0 flex justify-center items-center z-50" v-if="toggleModal">
+      
+         <div class="fixed overflow-x-hidden overflow-y-auto inset-0 flex justify-center items-center z-50" v-show="modalActive">
 
              <div class="relative mx-auto w-auto max-w-2xl">
                  <div class="bg-white w-full rounded shadow-2xl flex flex-col px-6 py-4 justify-center items-center">
@@ -29,8 +26,7 @@
                                           <div class="px-8 py-6">
                                               <label for="" class="block font-semibold">Description:</label> 
                                               <textarea placeholder="Enter Description" name="description" class="border-w-full h-5 px-3 py-5 md-2 hover:outline:none focus-ring-1 focus:ring-indigo-400 rounded-md"></textarea> 
-                                              <!-- <input type="text" placeholder="Enter Amount" name="amount" class="border-w-full h-5 px-3 py-5 md-2 hover:outline:none focus-ring-1 focus:ring-indigo-400 rounded-md"> -->
-                                          
+                                           
                                           </div>
                                       </div>
                                     </div>
@@ -44,26 +40,31 @@
                               </div>
                             </div>
                           </div>
-                          <button class="rounded bg-red-500 px-4 mt-4 py-2 w-3/12 m-auto mb-1" @click="toggleModal=false">
+                          <button class="rounded bg-red-500 px-4 mt-4 py-2 w-3/12 m-auto mb-1" @click="close">
                           Close
                           </button>
                      </div>
                  </div>
            </div>
-        <div v-if="toggleModal" class="absolute z-40 inset-0 opacity-25 bg-black">
+        <div v-if="modalActive" class="absolute z-40 inset-0 opacity-25 bg-black">
 
         </div>
 
     </div>
 </template>
-<script> 
-
+ 
+ 
+<script>
 export default {
-    name:"modal",
-    data(){
-        return{
-            toggleModal:false
+    props: ["modalActive"],
+    setup(props,  {emit}) {
+        const close = () => {
+            emit("close");
         }
+        return {close}
     }
-}
+
+};
 </script>
+
+ 

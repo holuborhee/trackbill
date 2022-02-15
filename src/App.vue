@@ -17,13 +17,12 @@
 <script>
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
-import WishListModal from './components/WishListModal.vue'
-
+ 
 export default {
   components:{
     TheHeader,
     TheFooter,
-    WishListModal,
+  
   }
   
 }
