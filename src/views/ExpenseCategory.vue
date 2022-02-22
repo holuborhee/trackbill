@@ -24,8 +24,8 @@
                             <td class="border px-4 py-2">N23,000</td>
                             <td class="border px-4 py-2">3</td>
                             <td class="border px-4 py-2">
-                                <button class="rounded px-3 py-2 mr-2 bg-orange-500 hover:bg-orange-700">View</button>
-                             </td>
+                                <router-link :to="{name:'single-expense-category'}" class="rounded px-3 py-2 mr-2 bg-orange-500 hover:bg-orange-700">View</router-link>
+                            </td>
                         </tr>
 
                         <tr>
@@ -33,7 +33,7 @@
                             <td class="border px-4 py-2">N53,000</td>
                             <td class="border px-4 py-2">5</td>
                             <td class="border px-4 py-2">
-                                 <button class="rounded px-3 py-2 mr-2 bg-orange-500 hover:bg-orange-700">View</button>
+                                <router-link :to="{name:'single-expense-category'}" class="rounded px-3 py-2 mr-2 bg-orange-500 hover:bg-orange-700">View</router-link>
                             </td>
                         </tr>
 
@@ -42,7 +42,7 @@
                             <td class="border px-4 py-2">N71,000</td>
                             <td class="border px-4 py-2">1</td>
                             <td class="border px-4 py-2">
-                                <button class="rounded px-3 py-2 mr-2 bg-orange-500 hover:bg-orange-700">View</button>
+                                <router-link :to="{name:'single-expense-category'}" class="rounded px-3 py-2 mr-2 bg-orange-500 hover:bg-orange-700">View</router-link>
                              </td>
                         </tr>
 
