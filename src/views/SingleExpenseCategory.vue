@@ -68,7 +68,6 @@
  
 <script>
 import Modal from  '../components/WishListModal.vue'
-import {ref} from 'vue'
 export default {
      
     components:{
