@@ -5,21 +5,22 @@
             <div class="flex justify-center justify-between">
                 <h1 class="text-2xl text-gray-700 mb-4">Wants</h1>
               
-              <Modal @close="toggleModal" :modalActive = "modalActive">
+              <Modal v-model="modalActive" @create-wish-list="addWishList($event)">
               </Modal> 
                 <button
                 class="mt-4 bg-indigo-500 text-white py-2 px-6 rounded-md hover:bg-indigo-600"
-                @click="toggleModal">Create Wishlist
+                @click="modalActive = true">Create Wishlist
                 </button>
+                
             </div>
-
+                
             <div class="max-w-sm rounded overflow-hidden shadow-lg bg-blue-200">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Balance: N25,000</div>
-                    <div class="font-bold text-xl mb-2">Wishlist Costs Sum: N90,000</div>
+                    <div class="font-bold text-xl mb-2">Wishlist Costs Sum: N{{wishlistSum()}}</div>
 
                     <p class="font-bold text-xl text-base">
-                        Wishlist Count: 9
+                        Wishlist Count: {{wishlistCount()}}
                      </p>
                  </div>
                 
@@ -44,21 +45,14 @@
                 </thead>
 
                 <tbody>
-                        <tr>
-                            <td class="border px-4 py-2">Buy Washing Machine</td>
-                            <td class="border px-4 py-2">N23,000</td>
+                     
+                        <tr v-for="(wishList, index) in listOfWishList" :key="index">
+                            <td class="border px-4 py-2">{{wishList.description}}</td>
+                            <td class="border px-4 py-2">{{wishList.amount}}</td>
                              
                         </tr>
 
-                        <tr>
-                           <td class="border px-4 py-2">Buy Air Condition</td>
-                            <td class="border px-4 py-2">N53,000</td>
-                        </tr>
-
-                        <tr>
-                          <td class="border px-4 py-2">Buy Sound system</td>
-                            <td class="border px-4 py-2">N93,000</td>
-                        </tr>
+                         
 
                 </tbody>
 
@@ -73,22 +67,69 @@
 
  
 <script>
-import Modal from '../components/WishListModal.vue'
+import Modal from  '../components/WishListModal.vue'
 import {ref} from 'vue'
 export default {
-    name:"test",
+     
     components:{
         Modal,
     },
-    setup(){
-        const modalActive = ref(false);
+     
 
-        const toggleModal = () => {
-            modalActive.value = !modalActive.value
+  
+    data(){
+        return {
+            listOfWishList: [
+                {
+                    amount:25000,
+                    description:"Buy Bed"
+                },
+
+                {
+                    amount:9000,
+                    description:"Buy Chair"
+                },
+
+                
+
+            ],
+
+            modalActive:false
+            
+                 
+            
         }
+    },
 
-        return { modalActive,toggleModal };
-    }
+      methods:{
+      addWishList(newwishList){
+
+            this.listOfWishList.unshift(newwishList);
+               
+                this.modalActive=false; 
+                  
+                
+     },
+     
+
+      wishlistCount(){
+         return this.listOfWishList.length;
+      },
+
+      wishlistSum(){
+          var sum = 0;
+        this.listOfWishList.forEach(e => {
+            sum += e.amount;
+        });
+        return sum
+
+      },
+ 
+  
+    },
+
+    
+    
     
 }
 </script>
