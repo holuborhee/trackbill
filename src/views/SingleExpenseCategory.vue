@@ -17,10 +17,10 @@
             <div class="max-w-sm rounded overflow-hidden shadow-lg bg-blue-200">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Balance: N25,000</div>
-                    <div class="font-bold text-xl mb-2">Wishlist Costs Sum: N{{wishlistSum()}}</div>
+                    <div class="font-bold text-xl mb-2">Wishlist Costs Sum: N{{wishlistSum}}</div>
 
                     <p class="font-bold text-xl text-base">
-                        Wishlist Count: {{wishlistCount()}}
+                        Wishlist Count: {{wishlistCount}}
                      </p>
                  </div>
                 
@@ -111,8 +111,10 @@ export default {
                 
      },
      
+ },
 
-      wishlistCount(){
+    computed:{
+         wishlistCount(){
          return this.listOfWishList.length;
       },
 
@@ -124,9 +126,7 @@ export default {
         return sum
 
       },
- 
-  
-    },
+    }
 
     
     
