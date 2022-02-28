@@ -18,3 +18,11 @@
         </nav>
     </div>
 </template>
+<script>
+export default{
+    name: "TheHeader",
+    props: {
+        showHeader: Boolean
+    }
+}
+</script>

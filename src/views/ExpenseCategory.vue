@@ -1,55 +1,131 @@
 <template>
-    <div class="p-4 m-4 bg-white rounded flex flex-col">
-        <div class="flex justify-between">
-            <h1 class="text-2xl text-gray-700 mb-4">Expense Categories</h1>
-         </div>
-
-        <div class="flex justify-center">
-            <table class="table-auto justify-center">
-
-                <thead>
-                    <tr>
-                         
-                        <th class="border px-4 py-2">Category</th>
-                        <th class="border px-4 py-2">Balance</th>
-                        <th class="border px-4 py-2">No of Items in Wishlist</th>
-                        <th class="border px-4 py-2">Actions</th>
-
-                    </tr>
-                </thead>
-
-                <tbody>
-                        <tr>
-                            <td class="border px-4 py-2">Wants</td>
-                            <td class="border px-4 py-2">N23,000</td>
-                            <td class="border px-4 py-2">3</td>
-                            <td class="border px-4 py-2">
-                                <router-link :to="{name:'single-expense-category'}" class="rounded px-3 py-2 mr-2 bg-orange-500 hover:bg-orange-700">View</router-link>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="border px-4 py-2">Needs</td>
-                            <td class="border px-4 py-2">N53,000</td>
-                            <td class="border px-4 py-2">5</td>
-                            <td class="border px-4 py-2">
-                                <router-link :to="{name:'single-expense-category'}" class="rounded px-3 py-2 mr-2 bg-orange-500 hover:bg-orange-700">View</router-link>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="border px-4 py-2">Savings</td>
-                            <td class="border px-4 py-2">N71,000</td>
-                            <td class="border px-4 py-2">1</td>
-                            <td class="border px-4 py-2">
-                                <router-link :to="{name:'single-expense-category'}" class="rounded px-3 py-2 mr-2 bg-orange-500 hover:bg-orange-700">View</router-link>
-                             </td>
-                        </tr>
-
-                </tbody>
-
-            </table>
-        </div>
-        
+  <div class="relative min-h-screen md:flex">
+    <!-- mobile menu bar -->
+    <div class="bg-gray-800 text-gray-100 flex justify-between md:hidden">
+      <!-- mobile menu button -->
+      <button
+        class="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700"
+      ></button>
     </div>
+
+    <!-- sidebar -->
+    <dashboardSidebar />
+
+    <!-- content -->
+    <div class="flex-1 p-10 text-2xl">
+      <dashboardHeader
+        class="p-10"
+        text="Hi, Samuel"
+        smallText="Welcome to TrackBill"
+      />
+      <main class="mt-6">
+        <section class="mb-8">
+          <main>
+            <ul class="flex justify-between">
+              <li class="flex-1 mr-4 card bg-blue-600 rounded">
+                <a href="#">
+                  <div class="flex flex-col p-5">
+                    <p
+                      class="
+                        font-display font-bold
+                        text-left
+                        font-body
+                        text-lg
+                        whitespace-no-wrap
+                        text-white
+                      "
+                    >
+                      Total Savings
+                    </p>
+                    <p
+                      class="
+                        font-display font-bold
+                        text-2xl text-left
+                        font-display
+                        text-xl text-white
+                      "
+                    >
+                      ₦71,000
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="flex-1 card mr-4 bg-blue-600 rounded">
+                <a href="#">
+                  <div class="flex flex-col p-5">
+                    <p
+                      class="
+                        font-display font-bold
+                        text-left
+                        font-body
+                        text-lg
+                        whitespace-no-wrap
+                        text-white
+                      "
+                    >
+                      Needs
+                    </p>
+                    <p
+                      class="
+                        font-display font-bold
+                        text-2xl text-left
+                        font-display
+                        text-xl text-white
+                      "
+                    >
+                      ₦53,000
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="flex-1 mr-4 card bg-blue-600 rounded">
+                <router-link :to="{ name: 'single-expense-category' }">
+                  <div class="flex flex-col p-5">
+                    <p
+                      class="
+                        font-display font-bold
+                        text-left
+                        font-body
+                        text-lg
+                        whitespace-no-wrap
+                        text-white
+                      "
+                    >
+                      Wants
+                    </p>
+                    <p
+                      class="
+                        font-display font-bold
+                        text-2xl text-left
+                        font-display
+                        text-xl text-white
+                      "
+                    >
+                      ₦25,000
+                    </p>
+                  </div>
+                </router-link>
+              </li>
+            </ul>
+          </main>
+        </section>
+      </main>
+    </div>
+  </div>
 </template>
+<script>
+import dashboardHeader from "../components/dashboardHeader.vue";
+import dashboardSidebar from "../components/dashboardSidebar.vue";
+export default {
+  name: "ExpenseCategory",
+  components: {
+    dashboardHeader,
+    dashboardSidebar,
+  },
+};
+</script>
+<style scoped>
+.card {
+  height: 120px;
+}
+</style>

@@ -1,30 +1,28 @@
  <template>
   <div class="flex flex-col h-screen justify-between">
-      
+    <TheHeader :showHeader="showHeader" />
+    <main class="flex-grow justify-center item-center">
+      <router-view></router-view>
+    </main>
 
-      <TheHeader /> 
-      <main class="flex-grow justify-center item-center">
-            <router-view></router-view>
-      </main>
-        
-      <TheFooter />
+    <TheFooter />
   </div>
- 
-   
-
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue'
-import TheFooter from './components/TheFooter.vue'
- 
+import TheHeader from "./components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
+
 export default {
-  components:{
+  components: {
     TheHeader,
     TheFooter,
-  
-  }
-  
-}
+  },
+  data() {
+    return {
+      showHeader: false,
+    };
+  },
+};
 </script>
 
