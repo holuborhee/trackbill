@@ -7,11 +7,10 @@
         </div>
     </header>
     <hr>
-
 </template>
 <script>
 export default {
-name: "dashboardHeader", 
+name: "DashboardHeader", 
 props: {
   text: String,
   smallText: String,

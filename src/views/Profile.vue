@@ -1,8 +1,8 @@
 <template>
  <div class="relative min-h-screen md:flex">
-<dashboardSidebar/>
-<div class="flex-1 p-10 text-2xl">
-    <dashboardHeader class="p-10" text="Profile" smallText="samuellawal60@gmail.com"/>
+
+<div class="flex-1 text-2xl">
+    <DashboardHeader class="p-10" text="Profile" smallText="samuellawal60@gmail.com"/>
     <div class="h-40 grid grid-cols gap-4 place-content-center">
     <i class="fa fa-user mx-auto fa-3x"></i>
  </div>
@@ -11,15 +11,14 @@
    <button class="rounded-full bg-cyan-500 text-white text-sm px-5 h-8">Edit Profile</button>
 </div>
 </div>
+
 </template>
 <script>
-import dashboardHeader from "../components/dashboardHeader.vue"
-import dashboardSidebar from "../components/dashboardSidebar.vue"
+import DashboardHeader from "../components/DashboardHeader.vue";
 export default {
-    name: "profile",
+    name: "Profile",
      components: {
-        dashboardHeader,
-        dashboardSidebar
+        DashboardHeader,
     },
 }
 </script>
