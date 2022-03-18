@@ -1,8 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Login from "./views/Login.vue";
+import LoginCode from "./views/LoginCode.vue";
 import ExpenseCategory from "./views/ExpenseCategory.vue";
 import SingleExpenseCategory from "./views/SingleExpenseCategory.vue";
+ 
+
  
   
 
@@ -31,6 +34,14 @@ const routes =  [
                       component: SingleExpenseCategory, 
                       name:'single-expense-category' 
                     },
+
+                    { 
+                      path: "/login-code", 
+                      component: LoginCode, 
+                      name:'login-code' 
+                    },
+
+  
                 ];
 const router = createRouter( {
      

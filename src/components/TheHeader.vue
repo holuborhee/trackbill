@@ -12,6 +12,13 @@
                                 <li class="sm:inline-block">
                                 <router-link :to="{name:'login'}" class="p-3 hover:text-white">Login</router-link>
                                 </li>
+
+                                <li class="sm:inline-block">
+                                    <a href="">Profile</a>
+                                 </li>
+
+                                
+                         
                         </ul>
                     </div>
                 </div>
