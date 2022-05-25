@@ -4,6 +4,7 @@ import Login from "./views/Login.vue";
 import LoginCode from "./views/LoginCode.vue";
 import ExpenseCategory from "./views/ExpenseCategory.vue";
 import SingleExpenseCategory from "./views/SingleExpenseCategory.vue";
+import FrontPage from "./views/FrontPage.vue";
  
 
  
@@ -14,9 +15,9 @@ import SingleExpenseCategory from "./views/SingleExpenseCategory.vue";
 
 const routes =  [
                     {
-                       path: "/", 
-                       component: {template:"<p>Hello World</p>"}, 
-                       name:'home' 
+                      path: "/", 
+                      component: FrontPage, 
+                      name:'FrontPage' 
                     },
                     { 
                       path: "/login", 
