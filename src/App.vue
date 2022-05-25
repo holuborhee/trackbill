@@ -1,11 +1,11 @@
  <template>
   <div class="flex flex-col h-screen justify-between">
-    <TheHeader />
+    <!-- <TheHeader /> -->
     <main class="flex-grow justify-center item-center">
       <router-view></router-view>
       
     </main>
-    <TheFooter />
+    <!-- <TheFooter /> -->
   </div>
 </template>
 
@@ -23,4 +23,11 @@ export default {
   },
 };
 </script>
+<style>
+body, html{
+  font-family: 'Roboto', sans-serif;
+}
+</style>
+
+
 

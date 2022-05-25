@@ -1,21 +1,28 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Login from "./views/Login.vue";
+import UserLogin from "./views/UserLogin.vue";
 import Dashboard from ".././src/views/DashboardPage/Dashboard.vue";
 import SingleExpenseCategory from "./views/SingleExpenseCategory.vue";
 import Profile from "./views/Profile.vue";
 import outflowGroup from "./views/outflowGroup.vue";
 import DashboardOverview from "./views/DashboardPage/DashboardOverview.vue"
+import HomeView from "./views/HomeView.vue"
+import VerificationPage from "./views/VerificationPage.vue" 
 
 const routes = [
   {
     path: "/",
-    component: { template: "<p>Hello World</p>" },
+    component: HomeView,
     name: "home",
   },
   {
     path: "/login",
-    component: Login,
+    component: UserLogin,
     name: "login",
+  },
+  {
+    path: "/authentication",
+    name: "verify",
+    component: VerificationPage ,
   },
   {
     path: "/dashboard",
