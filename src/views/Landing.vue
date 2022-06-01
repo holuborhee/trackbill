@@ -2,7 +2,7 @@
   <div
     class="
       min-h-screen
-      bg-coins-pattern bg-r bg-bottom bg-cover
+      bg-[url('/images/landing-page.png')] bg-r bg-bottom bg-cover
       overflow-hidden
       sm:py-12
     "

@@ -11,7 +11,7 @@
       "
     >
       <router-link
-        :to="{ name: 'FrontPage' }"
+        :to="{ name: 'Landing' }"
         class="p-2 mr-4 inline-flex items-center"
       >
         <img
@@ -87,8 +87,8 @@
               <span>Contact</span>
             </a>
           </div>
-          <router-link
-            :to="{ name: 'login' }"
+          <a
+             href="#"
             class="
               px-3
               py-1
@@ -101,8 +101,8 @@
               border border-blue-900
               rounded-lg
             "
-            ><span>Sign Up</span></router-link
-          >
+            ><span>Sign Up</span> </a>
+          
         </div>
       </div>
     </nav>

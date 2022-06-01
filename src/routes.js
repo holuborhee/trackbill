@@ -1,10 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-
-import Login from "./views/Login.vue";
-import LoginCode from "./views/LoginCode.vue";
 import ExpenseCategory from "./views/ExpenseCategory.vue";
 import SingleExpenseCategory from "./views/SingleExpenseCategory.vue";
-import FrontPage from "./views/FrontPage.vue";
+import Landing from "./views/Landing.vue";
  
 
  
@@ -16,13 +13,8 @@ import FrontPage from "./views/FrontPage.vue";
 const routes =  [
                     {
                       path: "/", 
-                      component: FrontPage, 
-                      name:'FrontPage' 
-                    },
-                    { 
-                      path: "/login", 
-                      component: Login, 
-                      name:'login' 
+                      component: Landing, 
+                      name:'Landing' 
                     },
                     { 
                     path: "/expense-category", 
@@ -35,15 +27,7 @@ const routes =  [
                       component: SingleExpenseCategory, 
                       name:'single-expense-category' 
                     },
-
-                    { 
-                      path: "/login-code", 
-                      component: LoginCode, 
-                      name:'login-code' 
-                    },
-
-  
-                ];
+                  ];
 const router = createRouter( {
      
         history: createWebHistory(),

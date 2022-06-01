@@ -6,10 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-                  'coins-pattern': "url('./images/landing-page.png')",
-                               
-                }
+      
     },
   },
   plugins: [],
