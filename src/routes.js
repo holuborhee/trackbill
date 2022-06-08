@@ -19,13 +19,13 @@ const routes =  [
                     { 
                     path: "/expense-category", 
                     component: ExpenseCategory, 
-                    name:'ExpenseCategory' 
+                    name:'expenseCategory' 
                     },
 
                     { 
                       path: "/single-expense-category", 
                       component: SingleExpenseCategory, 
-                      name:'SingleExpenseCategory' 
+                      name:'singleExpenseCategory' 
                     },
                   ];
 const router = createRouter( {
