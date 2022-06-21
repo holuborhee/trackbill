@@ -87,22 +87,20 @@
               <span>Contact</span>
             </a>
           </div>
-          <a
-             href="#"
+          <router-link
+            :to="{ name: 'Login' }"
             class="
               px-3
               py-1
               bg-gray-400
               text-gray-900
-              items-center
-              justify-center
               font-semibold
               hover:bg-gray-900 hover:text-white
               border border-blue-900
               rounded-lg
             "
-            ><span>Sign Up</span> </a>
-          
+            ><span>Sign In</span></router-link
+          >
         </div>
       </div>
     </nav>
