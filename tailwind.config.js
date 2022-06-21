@@ -6,6 +6,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      backgroundSize: {
+        '50%': '50%',
+      },
+       colors: {
+          'my-btn': '#00295D',
+        },
       
     },
   },
