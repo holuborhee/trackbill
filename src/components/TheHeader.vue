@@ -87,10 +87,10 @@
               <span>Contact</span>
             </a>
           </div>
-
-           <router-link
-        :to="{ name: 'Login' }"
-        class=" px-3
+          <a
+             href="#"
+            class="
+              px-3
               py-1
               bg-gray-400
               text-gray-900
@@ -99,9 +99,9 @@
               font-semibold
               hover:bg-gray-900 hover:text-white
               border border-blue-900
-              rounded-lg"
-      ><span>Sign In</span></router-link>
-         
+              rounded-lg
+            "
+            ><span>Sign Up</span> </a>
           
         </div>
       </div>
