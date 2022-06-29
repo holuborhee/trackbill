@@ -1,4 +1,5 @@
 <template>
+<TheHeader />
   <div
     class="
       min-h-screen
@@ -32,4 +33,16 @@
       </button>
     </div>
   </div>
+  <TheFooter />
 </template>
+
+<script>
+import TheFooter from '../components/TheFooter.vue'
+import TheHeader from '../components/TheHeader.vue'
+export default {
+  components:{
+    TheFooter,
+    TheHeader
+  }
+}
+</script>

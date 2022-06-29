@@ -15,7 +15,7 @@
         class="p-2 mr-4 inline-flex items-center"
       >
         <img
-          src="images/TrackBill-logo.png"
+          src="images/trackbill.png"
           alt=""
           width="60"
           class="fill-current ml-16"
@@ -59,8 +59,7 @@
                 text-gray-900
                 hover:bg-gray-900 hover:text-white
               "
-            >
-              <span>About Us</span>
+            >About Us
             </a>
             <a
               href="#"
@@ -71,8 +70,7 @@
                 text-gray-900
                 hover:bg-gray-900 hover:text-white
               "
-            >
-              <span>Feautures</span>
+            >Feautures
             </a>
             <a
               href="#"
@@ -83,12 +81,11 @@
                 text-gray-900
                 hover:bg-gray-900 hover:text-white
               "
-            >
-              <span>Contact</span>
+            >Contact
             </a>
           </div>
-          <a
-             href="#"
+           <router-link
+            :to="{ name: 'login' }"
             class="
               px-3
               py-1
@@ -100,8 +97,8 @@
               hover:bg-gray-900 hover:text-white
               border border-blue-900
               rounded-lg
-            "
-            ><span>Sign Up</span> </a>
+            ">Sign In</router-link
+          >
           
         </div>
       </div>
