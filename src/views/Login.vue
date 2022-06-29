@@ -1,6 +1,6 @@
 <template>
   <img
-    src="/images/TrackBill-logo.png"
+    src="/images/trackBill-logo.png"
     alt="trackbill logo"
     class="mx-auto"
     style="width: 100px"
@@ -12,7 +12,7 @@
       Sign in without using a password, just enter your email and we’ll send you
       a log in code. Easy!
     </p>
-    <form @submit.prevent.email="getVerificationCode">
+    <form @submit.prevent="getVerificationCode">
       <div class="px-10 py-6">
         <input
           type="email"
@@ -30,7 +30,7 @@
             hover:outline:none
             rounded-md
           "
-          v-model="userGmail"
+          v-model="userEmail"
           required
         />
         <div class="flex justify-center items-baseline">
@@ -60,13 +60,9 @@
 export default {
   data() {
     return {
-      userGmail: "",
+      userEmail: "",
     };
   },
-  props: {
-    gmail: String,
-  },
-
   methods: {
     getVerificationCode() {
       this.$router.push("./verify");
