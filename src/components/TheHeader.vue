@@ -15,7 +15,7 @@
         class="p-2 mr-4 inline-flex items-center"
       >
         <img
-          src="images/trackbill-logo.png"
+          src="images/trackbill.png"
           alt=""
           width="60"
           class="fill-current ml-16"

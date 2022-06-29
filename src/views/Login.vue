@@ -1,6 +1,6 @@
 <template>
   <img
-    src="/images/trackbill-logo.png"
+    src="/images/trackbill.png"
     alt="trackbill logo"
     class="mx-auto"
     style="width: 100px"
