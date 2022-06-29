@@ -1,9 +1,22 @@
 <template>
-  <login-background v-slot:image>
+  <div
+    class="
+      min-h-screen
+      bg-[url('/images/beach-product-background.png')] bg-bottom bg-cover
+      text-gray-800
+      flex flex-col
+      justify-center
+      relative
+      overflow-hidden
+      sm:py-12
+    "
+  >
     <div class="relative sm:max-w-xl mx-auto text-center">
-      <base-card>
+      <div
+        class="mt-4 bg-rgba(255, 255, 255, 0.3) shadow-2xl rounded-xl text-left"
+      >
         <img
-          src="images/TrackBill-logo.png"
+          src="/images/TrackBill-logo.png"
           alt="trackbill logo"
           class="mx-auto"
           style="width: 100px"
@@ -41,7 +54,7 @@
                   type="submit"
                   class="
                     mt-8
-                    bg-my-btn
+                    bg-primary
                     text-white
                     w-full
                     p-3
@@ -55,16 +68,14 @@
             </div>
           </form>
         </div>
-      </base-card>
+      </div>
       <div class="mx-auto my-8">
         <p class="font-bold italic">Privacy Policy and Terms of Service</p>
       </div>
     </div>
-  </login-background>
+  </div>
 </template>
 <script>
-import BaseCard from "../components/BaseCard.vue";
-import LoginBackground from "../components/LoginBackground.vue";
 export default {
   data() {
     return {
@@ -74,10 +85,7 @@ export default {
   props: {
     gmail: String,
   },
-  components: {
-    BaseCard,
-    LoginBackground,
-  },
+
   methods: {
     getVerificationCode() {
       this.$router.push("./verification");

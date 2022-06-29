@@ -59,8 +59,7 @@
                 text-gray-900
                 hover:bg-gray-900 hover:text-white
               "
-            >
-              <span>About Us</span>
+            >About Us
             </a>
             <a
               href="#"
@@ -71,8 +70,7 @@
                 text-gray-900
                 hover:bg-gray-900 hover:text-white
               "
-            >
-              <span>Feautures</span>
+            >Feautures
             </a>
             <a
               href="#"
@@ -83,8 +81,7 @@
                 text-gray-900
                 hover:bg-gray-900 hover:text-white
               "
-            >
-              <span>Contact</span>
+            >Contact
             </a>
           </div>
            <router-link
@@ -100,7 +97,7 @@
               hover:bg-gray-900 hover:text-white
               border border-blue-900
               rounded-lg
-            "><span>Sign In</span></router-link
+            ">Sign In</router-link
           >
           
         </div>

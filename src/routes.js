@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import ExpenseCategory from "./views/ExpenseCategory.vue";
 import SingleExpenseCategory from "./views/SingleExpenseCategory.vue";
 import Landing from "./views/Landing.vue";
+import Auth from "./views/Auth.vue";
 import Login from "./views/Login.vue";
 import Verification from "./views/Verification.vue";
  
@@ -20,16 +21,24 @@ const routes =  [
                     },
 
                     {
-                      path: "/login", 
-                      component: Login, 
-                      name:'Login' 
+                      path: "/auth", 
+                      component: Auth, 
+                       
+                      children: [
+                        {
+                          path: "login", 
+                          component: Login,
+                          name:'Login' 
+                        },
+                        {
+                          path: "verification", 
+                          component: Verification,
+                          name:'verification' 
+                        }
+                      ]
                     },
 
-                    {
-                      path: "/verification", 
-                      component: Verification, 
-                      name:'Verification' 
-                    },
+                   
                     { 
                     path: "/expense-category", 
                     component: ExpenseCategory, 

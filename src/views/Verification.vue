@@ -1,7 +1,20 @@
 <template>
-  <login-background v-slot:image>
+  <div
+    class="
+      min-h-screen
+      bg-[url('/images/beach-product-background.png')] bg-bottom bg-cover
+      text-gray-800
+      flex flex-col
+      justify-center
+      relative
+      overflow-hidden
+      sm:py-12
+    "
+  >
     <div class="relative sm:max-w-xl mx-auto text-center">
-      <base-card>
+      <div
+        class="mt-4 bg-rgba(255, 255, 255, 0.3) shadow-2xl rounded-xl text-left"
+      >
         <div class="py-4 p-10">
           <h2 class="text-3xl font-extrabold text-center">Code Verification</h2>
           <p class="text-center text-sm px-10 py-3 font-bold" userGmail>
@@ -134,7 +147,7 @@
                 flex
                 justify-center
                 w-80
-                bg-my-btn
+                bg-primary
                 text-white
                 items-center
                 text-center
@@ -152,17 +165,8 @@
             </p>
           </form>
         </div>
-      </base-card>
+      </div>
     </div>
-  </login-background>
+  </div>
 </template>
-<script>
-import LoginBackground from "../components/LoginBackground.vue";
-import BaseCard from "../components/BaseCard.vue";
-export default {
-  components: {
-    LoginBackground,
-    BaseCard,
-  },
-};
-</script>
+ 
