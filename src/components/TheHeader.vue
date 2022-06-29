@@ -85,7 +85,7 @@
             </a>
           </div>
            <router-link
-            :to="{ name: 'Login' }"
+            :to="{ name: 'login' }"
             class="
               px-3
               py-1
