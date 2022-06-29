@@ -69,7 +69,7 @@ export default {
 
   methods: {
     getVerificationCode() {
-      this.$router.push("./verification");
+      this.$router.push("./verify");
     },
   },
 };
