@@ -31,7 +31,7 @@
                   text-center
                   w-16
                   h-16
-                  border-b-2 border-my-btn
+                  border-b-2 border-primary
                   h-5
                   md-2
                   text-xs
@@ -50,7 +50,7 @@
                   text-center
                   w-16
                   h-16
-                  border-b-2 border-my-btn
+                  border-b-2 border-primary
                   h-5
                   md-2
                   text-xs
@@ -69,7 +69,7 @@
                   text-center
                   w-16
                   h-16
-                  border-b-2 border-my-btn
+                  border-b-2 border-primary
                   h-5
                   md-2
                   text-xs
@@ -88,7 +88,7 @@
                   text-center
                   w-16
                   h-16
-                  border-b-2 border-my-btn
+                  border-b-2 border-primary
                   h-5
                   md-2
                   text-xs
@@ -107,7 +107,7 @@
                   text-center
                   w-16
                   h-16
-                  border-b-2 border-my-btn
+                  border-b-2 border-primary
                   h-5
                   text-xs
                   bg-slate-100
@@ -125,7 +125,7 @@
                   text-center
                   w-16
                   h-16
-                  border-b-2 border-my-btn
+                  border-b-2 border-primary
                   h-5
                   md-2
                   text-xs
