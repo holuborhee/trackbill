@@ -15,7 +15,9 @@ export default {
     Verify
   },
 
-  props:['count'],
+  props: {
+    'count':Number
+  }
 
   data(){
     return{
