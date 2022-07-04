@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div class="flex">
-      {{count}}
-      <verify />
+  <div class="flex">
+    <div v-for="num in count" :key="num" >
       <verify />
     </div>  
   </div>
@@ -16,14 +14,15 @@ export default {
   },
 
   props: {
-    'count':Number
-  }
+    'count': Number
+  },
 
   data(){
     return{
       
     }
-  }
+  },
+  
 
 }
 </script>

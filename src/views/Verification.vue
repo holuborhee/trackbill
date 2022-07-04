@@ -49,7 +49,7 @@ export default {
 
   data(){
     return{
-      num:6
+      num:4
     }
   }
 
