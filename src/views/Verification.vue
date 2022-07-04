@@ -9,120 +9,7 @@
       </p>
       <form action="/authentication">
         <div class="px-10 py-8 flex my-8 justify-center items-center">
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <div></div>
+          <manage-verify :count='num'/>
         </div>
         <button
           type="submit"
@@ -152,4 +39,20 @@
     </div>
   </div>
 </template>
+
+<script>
+import ManageVerify from '../components/ManageVerify.vue'
+export default {
+  components:{
+    ManageVerify
+  },
+
+  data(){
+    return{
+      num:6
+    }
+  }
+
+}
+</script>
  
