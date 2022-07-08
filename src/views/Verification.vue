@@ -7,9 +7,9 @@
         <strong class="font-black">Johndoe@gmail.com</strong> <br />Please enter
         the code below
       </p>
-      <form action="/authentication">
+      <form action="#" v-on:submit.prevent="">
         <div class="px-10 py-8 flex my-8 justify-center items-center">
-          <manage-verify :count='num'/>
+          <manage-verify :count='num' v-model="code"/>
         </div>
         <button
           type="submit"
@@ -27,6 +27,7 @@
             rounded-md
             hover:bg-indigo-600
           "
+          @click="send"
         >
           Confirm Code
         </button>
@@ -47,9 +48,18 @@ export default {
     ManageVerify
   },
 
+
   data(){
     return{
-      num:4
+      num:4,
+      code:'5523'
+    }
+  },
+
+  methods:{
+    send(){
+      console.log(this.code)
+      
     }
   }
 

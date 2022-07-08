@@ -3,7 +3,9 @@
     
     <input
             type="number"
-            name='one'
+            :value="modelValue"
+             
+            @input="$emit('update:modelValue', $event.target.value)"
             class="
               text-center
               w-16
@@ -26,6 +28,19 @@
 <script>
 export default {
 
+ props:['modelValue'],
+
+data(){
+  return{
+     
+  }
+}, 
+
+mount(){
+  console.log(this.modelValue)
+}
+
+ 
 
 }
 </script>
