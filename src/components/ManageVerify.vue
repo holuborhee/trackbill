@@ -19,13 +19,23 @@ props: ['modelValue', 'count'],
 emits: ['update:modelValue'],
   data(){
     return{
-       codeArray:[]
+       codeArray:[],
+      
     }
   },
-
   mounted(){
     this.codeArray = this.modelValue.split('')
+  },
+
+  watch: {
+    codeArray: {
+      handler(newValue) {
+        this.$emit('update:modelValue', newValue)
+      },
+      deep: true
+    }
   }
+
   
 
 }

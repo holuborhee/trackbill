@@ -1,11 +1,10 @@
 <template>
   <div>
-    
+     
     <input
             type="number"
-            :value="modelValue"
-             
-            @input="$emit('update:modelValue', $event.target.value)"
+           :value="modelValue"
+           @input="$emit('update:modelValue', $event.target.value)"
             class="
               text-center
               w-16
@@ -21,26 +20,17 @@
             min="0"
             max="9"
           />
+
            
+            
   </div>
 </template>
 
 <script>
 export default {
 
- props:['modelValue'],
-
-data(){
-  return{
-     
-  }
-}, 
-
-mount(){
-  console.log(this.modelValue)
-}
-
- 
+props: ['modelValue'],
+emits: ['update:modelValue'],
 
 }
 </script>

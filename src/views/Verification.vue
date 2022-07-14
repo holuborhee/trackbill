@@ -52,15 +52,14 @@ export default {
   data(){
     return{
       num:4,
-      code:'5523'
+      code:''
     }
   },
 
   methods:{
     send(){
       console.log(this.code)
-      
-    }
+      }
   }
 
 }
