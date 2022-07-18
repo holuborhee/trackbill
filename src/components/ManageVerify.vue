@@ -30,7 +30,7 @@ emits: ['update:modelValue'],
   watch: {
     codeArray: {
       handler(newValue) {
-        this.$emit('update:modelValue', newValue)
+        this.$emit('update:modelValue', newValue.join(''))
       },
       deep: true
     }

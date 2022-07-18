@@ -59,7 +59,7 @@ export default {
   methods:{
     send(){
       console.log(this.code)
-      }
+    }
   }
 
 }
