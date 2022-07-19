@@ -2,7 +2,7 @@
   <div class="flex">
       
     <div v-for="num in count" :key="num" >
-      <verify v-model="codeArray[num - 1]"></verify>
+      <verify :modelValue="codeArray[num - 1]" @update:modelValue="setValue"></verify>
       
     </div>  
    
@@ -15,29 +15,28 @@ export default {
   components:{
     Verify
   },
-props: ['modelValue', 'count'],
-emits: ['update:modelValue'],
-  data(){
-    return{
-       codeArray:[],
-      
+  props: ['modelValue', 'count'],
+  emits: ['update:modelValue'],
+  computed: {
+    codeArray: {
+      get() {
+        return this.modelValue.split('')
+      },
+      set(value) {
+        this.$emit('update:modelValue', value.join(''))
+      }
     }
   },
-  mounted(){
-    this.codeArray = this.modelValue.split('')
-  },
+  methods: {
+    setValue(val){
+      if(val)
+        this.codeArray.push(val);
+      else
+        this.codeArray.pop();
 
-  watch: {
-    codeArray: {
-      handler(newValue) {
-        this.$emit('update:modelValue', newValue.join(''))
-      },
-      deep: true
+      this.codeArray = this.codeArray;
     }
   }
-
-  
-
 }
 </script>
 
