@@ -7,122 +7,9 @@
         <strong class="font-black">Johndoe@gmail.com</strong> <br />Please enter
         the code below
       </p>
-      <form action="/authentication">
+      <form action="#" v-on:submit.prevent="">
         <div class="px-10 py-8 flex my-8 justify-center items-center">
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <input
-            type="number"
-            name="email"
-            class="
-              text-center
-              w-16
-              h-16
-              border-b-2 border-primary
-              h-5
-              md-2
-              text-xs
-              bg-slate-100
-              hover:outline:none
-              m-2
-              text-5xl
-            "
-            min="0"
-            max="9"
-          />
-          <div></div>
+          <manage-verify :count='num' v-model="code"/>
         </div>
         <button
           type="submit"
@@ -140,6 +27,7 @@
             rounded-md
             hover:bg-indigo-600
           "
+          @click="send"
         >
           Confirm Code
         </button>
@@ -152,4 +40,28 @@
     </div>
   </div>
 </template>
+
+<script>
+import ManageVerify from '../components/ManageVerify.vue'
+export default {
+  components:{
+    ManageVerify
+  },
+
+
+  data(){
+    return{
+      num:4,
+      code:''
+    }
+  },
+
+  methods:{
+    send(){
+      console.log(this.code)
+    }
+  }
+
+}
+</script>
  
