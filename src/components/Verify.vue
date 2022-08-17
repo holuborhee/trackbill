@@ -17,6 +17,9 @@
               m-2
               text-5xl
             "
+            @click.left="handleClick"
+            @click.right="handleClick"
+            @click.middle="handleClick"
             min="0"
             max="9"
           />
@@ -31,6 +34,12 @@ export default {
 
 props: ['modelValue'],
 emits: ['update:modelValue'],
+
+methods:{
+    handleClick(e){
+       e.target.blur()
+    }
+}
 
 }
 </script>
