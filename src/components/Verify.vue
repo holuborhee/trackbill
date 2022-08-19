@@ -2,9 +2,11 @@
   <div>
      
     <input
-            type="number"
+            type="text"
            :value="modelValue"
            @input="$emit('update:modelValue', $event.target.value)"
+           maxlength="1"
+           pattern="[0-9]"
             class="
               text-center
               w-16
@@ -31,14 +33,20 @@
 
 <script>
 export default {
-
 props: ['modelValue'],
 emits: ['update:modelValue'],
+
+data(){
+  return{
+    limit:2
+  }
+},
 
 methods:{
     handleClick(e){
        e.target.blur()
-    }
+    },
+   
 }
 
 }
