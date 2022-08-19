@@ -35,12 +35,7 @@
 export default {
 props: ['modelValue'],
 emits: ['update:modelValue'],
-
-data(){
-  return{
-    limit:2
-  }
-},
+ 
 
 methods:{
     handleClick(e){
