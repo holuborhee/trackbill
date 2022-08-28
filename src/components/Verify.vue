@@ -2,6 +2,7 @@
   <div>
      
     <input
+            ref="input"
             type="text"
            :value="modelValue"
            @input="$emit('update:modelValue', $event.target.value)"
@@ -19,11 +20,12 @@
               m-2
               text-5xl
             "
+            min="0"
+            max="9"
             @click.left="handleClick"
             @click.right="handleClick"
             @click.middle="handleClick"
-            min="0"
-            max="9"
+            @focus="handleOnFocus"
           />
 
            
@@ -33,16 +35,38 @@
 
 <script>
 export default {
-props: ['modelValue'],
-emits: ['update:modelValue'],
+props: {
+  modelValue:{
+    type: String
+  },
+  focus:{
+    type: Boolean
+  },
+  shouldAutoFocus:{
+    type: Boolean
+  }
+
+},
+emits: ['update:modelValue', 'on-focus'],
  
 
 methods:{
     handleClick(e){
        e.target.blur()
     },
+
+    handleOnFocus(){
+      this.$refs.input.select();
+      return this.$emit('on-focus');
+    }
    
-}
+},
+
+ mounted() {
+     if (this.$refs.input && this.focus && this.shouldAutoFocus) {
+      this.$refs.input.focus();
+    }
+  },
 
 }
 </script>

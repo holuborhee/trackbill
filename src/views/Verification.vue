@@ -9,7 +9,10 @@
       </p>
       <form action="#" v-on:submit.prevent="">
         <div class="px-10 py-8 flex my-8 justify-center items-center">
-          <manage-verify :count='num' v-model="code"/>
+          <manage-verify :count='num' 
+          v-model="code"
+          :should-auto-focus="true"
+          />
         </div>
         <button
           type="submit"

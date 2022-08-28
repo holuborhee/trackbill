@@ -1,8 +1,14 @@
 <template>
   <div class="flex">
       
-    <div v-for="num in count" :key="num" >
-      <verify :modelValue="codeArray[num - 1]" @update:modelValue="setValue"></verify>
+    <div v-for="(num, i) in count" :key="i" >
+      <verify 
+      :focus="activeInput === i"
+      :modelValue="codeArray[num - 1]" 
+      :should-auto-focus="shouldAutoFocus"
+      @update:modelValue="setValue"
+      @on-focus="handleOnFocus(i)"
+      ></verify>
       
     </div>  
    
@@ -15,7 +21,26 @@ export default {
   components:{
     Verify
   },
-  props: ['modelValue', 'count'],
+
+  data(){
+    return{
+      activeInput:0
+    }
+  },
+  props:{
+    modelValue:{
+      type:String,
+    },
+    count:{
+      type:Number
+    },
+     shouldAutoFocus: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+
   emits: ['update:modelValue'],
   computed: {
     codeArray: {
@@ -35,7 +60,13 @@ export default {
         this.codeArray.pop();
 
       this.codeArray = this.codeArray;
-    }
+    },
+
+    handleOnFocus(index) {
+      this.activeInput = index;
+    },
+
+    
   }
 }
 </script>
