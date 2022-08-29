@@ -4,10 +4,10 @@
     <input
             ref="input"
             type="text"
-           :value="modelValue"
-           @input="$emit('update:modelValue', $event.target.value)"
-           maxlength="1"
-           pattern="[0-9]"
+            :value="modelValue"
+            @input="$emit('update:modelValue', $event.target.value)"
+            maxlength="1"
+            pattern="[0-9]"
             class="
               text-center
               w-16
@@ -25,7 +25,7 @@
             @click.left="handleClick"
             @click.right="handleClick"
             @click.middle="handleClick"
-            @focus="handleOnFocus"
+            
           />
 
            
@@ -54,12 +54,6 @@ methods:{
     handleClick(e){
        e.target.blur()
     },
-
-    handleOnFocus(){
-      this.$refs.input.select();
-      return this.$emit('on-focus');
-    }
-   
 },
 
  mounted() {

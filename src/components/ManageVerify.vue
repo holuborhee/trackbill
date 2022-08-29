@@ -7,7 +7,7 @@
       :modelValue="codeArray[num - 1]" 
       :should-auto-focus="shouldAutoFocus"
       @update:modelValue="setValue"
-      @on-focus="handleOnFocus(i)"
+     
       ></verify>
       
     </div>  
@@ -61,13 +61,9 @@ export default {
 
       this.codeArray = this.codeArray;
     },
-
-    handleOnFocus(index) {
-      this.activeInput = index;
-    },
-
-    
-  }
+ 
+  },
+ 
 }
 </script>
 
