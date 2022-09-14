@@ -1,4 +1,5 @@
 <template>
+ 
   <div class="mt-4 bg-rgba(255, 255, 255, 0.3) shadow-2xl rounded-xl text-left">
     <div class="py-4 p-10">
       <h2 class="text-3xl font-extrabold text-center">Code Verification</h2>
@@ -9,9 +10,11 @@
       </p>
       <form action="#" v-on:submit.prevent="">
         <div class="px-10 py-8 flex my-8 justify-center items-center">
-          <manage-verify :count='num' 
-          v-model="code"
-          :should-auto-focus="true"
+          <manage-verify
+            ref="otpInput"
+            :num-inputs="count"
+            :should-auto-focus="true"
+            @on-complete="handleOnComplete"
           />
         </div>
         <button
@@ -31,6 +34,7 @@
             hover:bg-indigo-600
           "
           @click="send"
+          @keyup.enter="send"
         >
           Confirm Code
         </button>
@@ -44,27 +48,41 @@
   </div>
 </template>
 
+
+
+
 <script>
-import ManageVerify from '../components/ManageVerify.vue'
-export default {
-  components:{
-    ManageVerify
-  },
+  // Import in a Vue component
+  import ManageVerify from '../components/ManageVerify.vue'
+ 
+  
+  export default {
+    name: "App",
+    components: {
+    ManageVerify,
+   
+},
 
-
-  data(){
+data(){
     return{
-      num:4,
-      code:''
+      count:4
     }
   },
 
   methods:{
-    send(){
-      console.log(this.code)
-    }
-  }
+    handleOnComplete(value){
+        console.log(value);
+      },
 
-}
-</script>
+      send(){
+        //
+      }
+  },
+ 
+  }
+  </script>
+   
+  
+
+
  
